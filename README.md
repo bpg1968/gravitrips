@@ -2,7 +2,7 @@
 A JavaFX Connect Four–style game built with Gradle and Java 21, featuring pluggable AI strategies and a simple MVC architecture.
 
 ## Features
-- 7x6 Connect Four board with configurable dimensions and win length.
+- 7x6 game board with configurable dimensions and win length.
 - Human vs Human and Human vs Computer modes with background AI turns.
 - Plugin-ready AI system; built-in random strategy plus support for external strategies in `ai_players/`.
 - JavaFX UI with column click-to-drop, menus for New Game/Exit, and end-of-game dialogs.
@@ -26,7 +26,7 @@ A JavaFX Connect Four–style game built with Gradle and Java 21, featuring plug
 5. Java requirement: JDK 21 on your PATH. If Gradle cannot find Java, set `JAVA_HOME` to your JDK 21 path.
 
 ## About
-Connect Four (aka Gravitrips in some regions) is a two-player connection game where players drop colored discs into a vertical grid, aiming to align four in a row horizontally, vertically, or diagonally. Commercial versions include Hasbro’s classic Connect Four; variants span different board sizes, pop-out mechanics, and digital adaptations with AI opponents.
+Gravitrips is a two-player connection game where players drop colored discs into a vertical grid, aiming to align four in a row horizontally, vertically, or diagonally. Commercial versions include Hasbro’s classic Connect Four; variants span different board sizes, pop-out mechanics, and digital adaptations with AI opponents.
 
 ## Creating Your Own AI Player
 1. Implement `ca.bgiroux.gravitrips.model.MoveStrategy` with a public no-arg constructor and a unique `getName()`:
