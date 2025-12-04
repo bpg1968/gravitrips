@@ -22,13 +22,19 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
+private val javafxModules = listOf("javafx.controls", "javafx.fxml")
+
 application {
     mainClass.set("ca.bgiroux.gravitrips.view.ConnectFourApp")
+    applicationDefaultJvmArgs = listOf(
+        "--module-path", "\$APP_HOME/lib",
+        "--add-modules", javafxModules.joinToString(",")
+    )
 }
 
 javafx {
     version = "21.0.2"
-    modules = listOf("javafx.controls", "javafx.fxml")
+    modules = javafxModules
 }
 
 tasks.test {
